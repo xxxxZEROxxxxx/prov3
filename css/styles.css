@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #343a40;
+    --navbar-bg: #343a40;
+    --navbar-text: #ffffff;
+    --navbar-hover: #ffc107;
+    --btn-primary-bg: #ffc107;
+    --btn-primary-hover: #e0a800;
+    --btn-secondary-bg: #6c757d;
+    --btn-secondary-hover: #5a6268;
+    --footer-bg: #343a40;
+    --footer-text: #ffffff;
+    --carousel-caption-text: #343a40;
+    --carousel-caption-shadow: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* تخصيص Navbar */
+.navbar {
+    background-color: var(--navbar-bg);
+    transition: background-color 0.3s;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--navbar-text) !important;
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: var(--navbar-hover) !important;
+}
+
+/* تخصيص Carousel */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* تخصيص نصوص Carousel Caption في الوضع الفاتح */
+.carousel-caption h5,
+.carousel-caption p {
+    color: var(--carousel-caption-text); /* لون نص داكن */
+    text-shadow: 1px 1px 2px var(--carousel-caption-shadow); /* إضافة ظل للنص لتحسين الوضوح */
+}
+
+/* تخصيص الأزرار */
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-hover);
+}
+
+/* تخصيص الفوتر */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* تخصيص العناوين */
+h2, h3 {
+    color: var(--text-color);
+}
+
+/* تخصيص البطاقات */
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+/* وضع الداكن */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --navbar-bg: #1f1f1f;
+    --navbar-text: #e0e0e0;
+    --navbar-hover: #ffc107;
+    --btn-primary-bg: #bb86fc;
+    --btn-primary-hover: #985eff;
+    --btn-secondary-bg: #03dac6;
+    --btn-secondary-hover: #00bfa5;
+    --footer-bg: #1f1f1f;
+    --footer-text: #e0e0e0;
+    --carousel-caption-text: #e0e0e0;
+    --carousel-caption-shadow: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .carousel-item img {
+    filter: brightness(0.8);
+}
+
+.dark-mode .card {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.dark-mode .accordion-button {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+    background-color: #3c3c3c;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <!-- تضمين الرأس كما في النموذج الأساسي -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجات متجر الكتب الفاخر</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">متجر الكتب</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav me-3">
+                <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">عن الموقع</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">المنتجات</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">مدونة</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">معرض الصور</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">تسجيل الدخول</a></li>
+            </ul>
+            <!-- زر التبديل بين الوضع الداكن والفاتح -->
+            <button id="themeToggle" class="btn btn-secondary">
+                <i class="bi bi-moon-fill"></i> <!-- أيقونة الوضع الداكن -->
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- محتوى صفحة المنتجات -->
+ <!-- محتوى صفحة المنتجات -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">منتجاتنا</h2>
+    <div class="row">
+    
+        <!-- بطاقة منتج: قبل أن نلتقي -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://static.jarirreader.com/images/300x412/20674.jpg" height="300" width="350" class="card-img-top" alt="قبل أن نلتقي">
+                <div class="card-body">
+                    <h5 class="card-title">قبل أن نلتقي</h5>
+                    <p class="card-text">جوجو مويس: رحلة رومانسية بين شخصين يتحديان الظروف.</p>
+                    <a href="product-details-before-we-met.html" class="btn btn-primary">تفاصيل أكثر</a>
+                </div>
+            </div>
+        </div>
+        <!-- بطاقة منتج: أنا قبلك -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img  height="300" width="350" src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=85,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/4/8/480001.jpg" class="card-img-top" alt="أنا قبلك">
+                <div class="card-body">
+                    <h5 class="card-title">أنا قبلك</h5>
+                    <p class="card-text">جوجو مويس: قصة حب رائعة تتناول قضايا إنسانية.</p>
+                    <a href="product-details-me-before-you.html" class="btn btn-primary">تفاصيل أكثر</a>
+                </div>
+            </div>
+        </div>
+        <!-- بطاقة منتج: العادات الذرية -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://ebooklibery.com/storage/media/atomic-habits.webp"  height="300" width="350" class="card-img-top" alt="العادات الذرية">
+                <div class="card-body">
+                    <h5 class="card-title">العادات الذرية</h5>
+                    <p class="card-text">جيمس كلير: يركز على بناء العادات الجيدة وتغيير السلوكيات السلبية.</p>
+                    <a href="product-details-atomic-habits.html" class="btn btn-primary">تفاصيل أكثر</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+
+    <!-- الفوتر -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2024 متجر الكتب الفاخر. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle مع Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ملف JavaScript الخاص بك -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

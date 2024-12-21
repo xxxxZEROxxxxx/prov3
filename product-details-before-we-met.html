@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دفتر الملاحظات</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">متجر الكتب</a>
+    </div>
+</nav>
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=85,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/4/8/480001.jpg" class="img-fluid rounded" alt="قبل أن نلتقي">
+        </div>
+        <div class="col-md-6">
+            <h3>قبل أن نلتقي</h3>
+            <p><strong>المؤلف:</strong> جوجو مويس</p>
+            <p><strong>السعر:</strong> 60 شيكل</p>
+            <p><strong>الوصف:</strong> رحلة رومانسية بين شخصين يتحديان الظروف.</p>
+            <button class="btn btn-primary" onclick="addToCart()">أضف إلى السلة</button>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center bg-dark text-light py-3">
+    <div class="container">
+        <p>&copy; 2024 متجر الكتب الفاخر. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+<script>
+    function addToCart() {
+        // تفاصيل المنتج
+        const product = {
+            name: "قبل أن نلتقي",
+            price: 70,
+            image: "https://static.jarirreader.com/images/300x412/20674.jpg",
+            quantity: 1
+        };
+
+        // استرجاع السلة الحالية من LocalStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // التحقق إذا كان المنتج موجودًا بالفعل في السلة
+        const existingProduct = cart.find(item => item.name === product.name);
+        if (existingProduct) {
+            existingProduct.quantity += 1; // زيادة الكمية
+        } else {
+            cart.push(product); // إضافة المنتج للسلة
+        }
+
+        // تخزين السلة المحدثة
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // رسالة نجاح
+        alert("تمت إضافة الكتاب إلى السلة!");
+    }
+</script>
+</body>
+</html>
+
