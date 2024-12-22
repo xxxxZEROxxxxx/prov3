@@ -1,6 +1,4 @@
-// js/scripts.js
 
-// تغيير لون الخلفية عند النقر على زر
 
 // التحقق من صحة نموذج الاتصال
 function registerUser(name, email, password) {
@@ -32,7 +30,7 @@ function loginUser(email, password) {
     // تخزين حالة تسجيل الدخول
     localStorage.setItem("currentUser", JSON.stringify(user));
     alert(`مرحبًا، ${user.name}! تم تسجيل دخولك بنجاح.`);
-    window.location.href = "index.html"; // إعادة التوجيه إلى الصفحة الرئيسية
+    window.location.href = "index.html";     
     return true;
   } else {
     alert("البريد الإلكتروني أو كلمة المرور غير صحيحة.");
