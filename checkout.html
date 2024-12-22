@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <!-- تضمين الرأس كما في النموذج الأساسي -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إتمام الشراء - متجر الكتب الفاخر</title>
@@ -31,15 +30,13 @@
                 <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">تسجيل الدخول</a></li>
             </ul>
-            <!-- زر التبديل بين الوضع الداكن والفاتح -->
             <button id="themeToggle" class="btn btn-secondary">
-                <i class="bi bi-moon-fill"></i> <!-- أيقونة الوضع الداكن -->
+                <i class="bi bi-moon-fill"></i> 
             </button>
         </div>
     </div>
 </nav>
 
-    <!-- محتوى صفحة الدفع -->
     <section class="container my-5">
         <h2 class="text-center mb-4">إتمام الشراء</h2>
         <form id="checkoutForm" onsubmit="return validateCheckoutForm()" action="#" method="post">
@@ -76,14 +73,12 @@
         </form>
     </section>
 
-    <!-- الفوتر -->
     <footer class="text-center">
         <div class="container">
             <p>&copy; 2024 متجر الكتب الفاخر. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
-    <!-- إضافة وظائف JavaScript -->
     <script>
         function validateCheckoutForm() {
             const name = document.getElementById('shippingName').value.trim();
@@ -96,16 +91,13 @@
                 return false;
             }
 
-            // يمكن إضافة المزيد من التحقق هنا
 
             alert("تم إتمام عملية الشراء بنجاح!");
             return true;
         }
     </script>
 
-    <!-- Bootstrap JS Bundle مع Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- ملف JavaScript الخاص بك -->
     <script src="js/scripts.js"></script>
 </body>
 </html>

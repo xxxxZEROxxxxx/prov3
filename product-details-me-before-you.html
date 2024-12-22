@@ -4,14 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دفتر الملاحظات</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">متجر الكتب</a>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">متجر الكتب</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav me-3">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">عن الموقع</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">المنتجات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">مدونة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">معرض الصور</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">تسجيل الدخول</a></li>
+                </ul>
+                <button id="themeToggle" class="btn btn-secondary">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 <section class="container my-5">
     <div class="row">
         <div class="col-md-6">
@@ -23,6 +44,7 @@
             <p><strong>السعر:</strong> 65 شيكل</p>
             <p><strong>الوصف:</strong> قصة حب رائعة تتناول قضايا إنسانية.</p>
             <button class="btn btn-primary" onclick="addToCart()">أضف إلى السلة</button>
+            <button class="btn btn-primary"      ><a style="text-decoration: none; color: azure" href="products.html">الرجوع </a> </button>
         </div>
     </div>
 </section>
@@ -35,7 +57,6 @@
 </footer>
 <script>
     function addToCart() {
-        // تفاصيل المنتج
         const product = {
             name: "أنا قلبك",
             price: 65,
@@ -43,21 +64,19 @@
             quantity: 1
         };
 
-        // استرجاع السلة الحالية من LocalStorage
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        // التحقق إذا كان المنتج موجودًا بالفعل في السلة
         const existingProduct = cart.find(item => item.name === product.name);
         if (existingProduct) {
-            existingProduct.quantity += 1; // زيادة الكمية
+            existingProduct.quantity += 1;   
         } else {
-            cart.push(product); // إضافة المنتج للسلة
+            cart.push(product); 
         }
 
-        // تخزين السلة المحدثة
+           
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        // رسالة نجاح
+          
         alert("تمت إضافة الكتاب إلى السلة!");
     }
 </script>
